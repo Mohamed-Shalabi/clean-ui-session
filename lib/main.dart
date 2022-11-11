@@ -1,4 +1,4 @@
-import 'package:clean_ui_session/modules/home/presentation/screens/home_screen.dart';
+import 'package:clean_ui_session/modules/home/presentation/screens/responsive_home/home_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
