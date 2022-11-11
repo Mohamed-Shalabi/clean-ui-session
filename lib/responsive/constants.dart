@@ -1,3 +1,3 @@
 abstract class ScreensSizes {
-  static const mobileMaxWidth = 500;
+  static const mobileMaxWidth = 600;
 }
