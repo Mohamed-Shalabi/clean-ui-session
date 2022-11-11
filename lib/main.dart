@@ -10,10 +10,12 @@ import 'styles/app_themes.dart';
 // - Localization (NEVER use Directionality)
 // - Reusable Components
 // - My favourite responsive method
-// - Strings, Assets, Colors, Fonts, TextStyles, Themes, Sizes and Spacings
+// - Strings, Assets, Colors, Fonts, TextStyles and Themes
 // - How to divide the ui? Why state management?
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await EasyLocalization.ensureInitialized();
 
   final prefs = await SharedPreferences.getInstance();
 
@@ -36,8 +38,8 @@ class _EasyLocalizationApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return EasyLocalization(
       path: 'assets/translations',
-      supportedLocales: const [Locale('en'), Locale('ar')],
-      startLocale: const Locale('en'),
+      supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],
+      startLocale: const Locale('en', 'US'),
       child: child,
     );
   }
@@ -50,6 +52,9 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Clean UI Session',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       debugShowCheckedModeBanner: false,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
