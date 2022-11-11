@@ -21,7 +21,13 @@ class AppThemesViewModel extends Cubit<bool> {
   }
 
   ThemeMode get themeMode => _isLight ? ThemeMode.light : ThemeMode.dark;
+}
 
+extension ThemeUtils on BuildContext {
+  ThemeData get theme => Theme.of(this);
+}
+
+abstract class AppThemes {
   static final ThemeData lightTheme = ThemeData(
     fontFamily: FontsConstants.gilroyFontFamily,
     colorScheme: ColorSchemes.lightColorScheme,
@@ -45,8 +51,4 @@ class AppThemesViewModel extends Cubit<bool> {
       ),
     ),
   );
-}
-
-extension ThemeUtils on BuildContext {
-  ThemeData get theme => Theme.of(this);
 }

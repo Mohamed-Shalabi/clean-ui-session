@@ -1,5 +1,3 @@
-
-
 /// [AppImageAssets._imagesPath]/1x   => mdpi
 /// [AppImageAssets._imagesPath]/1.5x => hdpi
 /// [AppImageAssets._imagesPath]/2x   => xhdpi
