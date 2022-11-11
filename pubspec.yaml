@@ -40,6 +40,7 @@ dependencies:
   shared_preferences: ^2.0.15
   path: ^1.8.2
   easy_localization: ^3.0.1
+  flutter_svg: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
     - assets/translations/
     - assets/images/banner.jpg
     - assets/images/
+    - assets/svg/
+    - assets/fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

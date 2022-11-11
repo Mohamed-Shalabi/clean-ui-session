@@ -28,27 +28,15 @@ extension ThemeUtils on BuildContext {
 }
 
 abstract class AppThemes {
-  static final ThemeData lightTheme = ThemeData(
+  static final lightTheme = ThemeData(
     fontFamily: FontsConstants.gilroyFontFamily,
     colorScheme: ColorSchemes.lightColorScheme,
     scaffoldBackgroundColor: AppColors.white,
-    appBarTheme: AppBarTheme(
-      elevation: 0,
-      titleTextStyle: AppTextStyles.appBarTitleStyle.copyWith(
-        fontFamily: FontsConstants.gilroyFontFamily,
-      ),
-    ),
   );
 
   static final darkTheme = ThemeData(
     fontFamily: FontsConstants.gilroyFontFamily,
     colorScheme: ColorSchemes.darkColorScheme,
     scaffoldBackgroundColor: AppColors.black,
-    appBarTheme: AppBarTheme(
-      elevation: 0,
-      titleTextStyle: AppTextStyles.appBarTitleStyle.copyWith(
-        fontFamily: FontsConstants.gilroyFontFamily,
-      ),
-    ),
   );
 }
