@@ -8,12 +8,12 @@ class ResponsiveLayout extends StatelessWidget {
     required Widget defaultScreen,
     this.mobileLandscapeScreen,
     this.tabletScreen,
-  })  : _mobilePortraitScreen = defaultScreen,
+  })  : mobilePortraitScreen = defaultScreen,
         super(key: key);
 
   /// Used in mobile portrait Screens
   /// And used in other screens if they are not provided
-  final Widget _mobilePortraitScreen;
+  final Widget mobilePortraitScreen;
   final Widget? mobileLandscapeScreen;
   final Widget? tabletScreen;
 
@@ -23,7 +23,7 @@ class ResponsiveLayout extends StatelessWidget {
       return SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: _mobilePortraitScreen,
+        child: mobilePortraitScreen,
       );
     }
 
@@ -32,7 +32,7 @@ class ResponsiveLayout extends StatelessWidget {
       return SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: _mobilePortraitScreen,
+        child: mobilePortraitScreen,
       );
     }
 
@@ -42,14 +42,14 @@ class ResponsiveLayout extends StatelessWidget {
       return SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: mobileLandscapeScreen ?? _mobilePortraitScreen,
+        child: mobileLandscapeScreen ?? mobilePortraitScreen,
       );
     }
 
     return SizedBox(
       width: double.infinity,
       height: double.infinity,
-      child: tabletScreen ?? _mobilePortraitScreen,
+      child: tabletScreen ?? mobilePortraitScreen,
     );
   }
 }
